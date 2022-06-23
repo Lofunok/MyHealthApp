@@ -21,19 +21,22 @@ const LoginScreen = () => {
         <View style={styles.welcomeTextBox}>
           <Text style={styles.welcomeText}>Welcome To MyHealth.</Text>
         </View>
-        <TextInput
-          style={styles.emailInput}
-          onChangeText={onChangeText}
-          value={email}
-          placeholder='Email Address'
-        />
-        <TextInput
-          secureTextEntry //hides the password as it's being entered
-          style={styles.passwordInput}
-          onChangeText={onChangePassword}
-          value={password}
-          placeholder='Password'
-        />
+        {/* Container for inputs */}
+        <View style={styles.inputsContainter}>
+          <TextInput
+            style={styles.input}
+            onChangeText={onChangeText}
+            value={email}
+            placeholder='Email Address'
+          />
+          <TextInput
+            secureTextEntry //hides the password as it's being entered
+            style={styles.input}
+            onChangeText={onChangePassword}
+            value={password}
+            placeholder='Password'
+          />
+        </View>
         <View style={styles.homeTextContainer}>
           <TouchableOpacity onPress={() => {}}>
             <Text style={styles.pressableText}>Forgot Password?</Text>
@@ -54,27 +57,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  emailInput: {
-    position: "absolute",
-    justifyContent: "center",
+  inputsContainter: {
+    positions: "absolute",
+    width: "90%",
+  },
+  input: {
     padding: 10,
+    marginTop: 25,
     top: 369,
-    width: 340,
     borderRadius: 10,
     height: 57,
     backgroundColor: "rgba(255, 88, 88, 0.15)",
   },
-  passwordInput: {
-    position: "absolute",
-    justifyContent: "center",
-    padding: 10,
-    top: 466.84,
-    width: 340,
-    borderRadius: 10,
-    height: 57,
-    backgroundColor: "rgba(255, 88, 88, 0.15)",
-  },
-
   logo: {
     borderRadius: 20,
     position: "absolute",

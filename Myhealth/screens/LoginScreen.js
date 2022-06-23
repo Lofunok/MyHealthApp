@@ -41,6 +41,12 @@ export default LoginScreen;
 
 //Component Styles
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#FFFFF",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   emailInput: {
     position: "absolute",
     justifyContent: "center",
@@ -61,12 +67,7 @@ const styles = StyleSheet.create({
     height: 57,
     backgroundColor: "rgba(255, 88, 88, 0.15)",
   },
-  container: {
-    flex: 1,
-    backgroundColor: "#FFFFF",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+
   logo: {
     borderRadius: 20,
     position: "absolute",

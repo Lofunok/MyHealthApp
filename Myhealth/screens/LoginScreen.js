@@ -24,10 +24,10 @@ const LoginScreen = () => {
           style={styles.emailInput}
           onChangeText={onChangeText}
           value={email}
-          placeholder='Email Address'
+          placeholder='Email ss'
         />
         <TextInput
-          secureTextEntry
+          secureTextEntry //hides the password as it's being entered
           style={styles.passwordInput}
           onChangeText={onChangePassword}
           value={password}

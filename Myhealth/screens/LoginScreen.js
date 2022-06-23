@@ -5,6 +5,7 @@ import {
   TextInput,
   View,
   Image,
+  TouchableOpacity,
 } from "react-native";
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
@@ -24,7 +25,7 @@ const LoginScreen = () => {
           style={styles.emailInput}
           onChangeText={onChangeText}
           value={email}
-          placeholder='Email ss'
+          placeholder='Email Address'
         />
         <TextInput
           secureTextEntry //hides the password as it's being entered
@@ -33,6 +34,11 @@ const LoginScreen = () => {
           value={password}
           placeholder='Password'
         />
+        <View style={styles.forgotPasswordContainer}>
+          <TouchableOpacity onPress={() => {}}>
+            <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -92,5 +98,20 @@ const styles = StyleSheet.create({
     lineHeight: 39,
     textAlign: "center",
     color: "#000",
+  },
+  forgotPasswordContainer: {
+    position: "absolute",
+    width: 140,
+    height: 18,
+    top: 536,
+    left: 225,
+  },
+  forgotPasswordText: {
+    fontFamily: "normal",
+    fontStyle: "normal",
+    fontWeight: "600",
+    fontSize: 15,
+    lineHeight: 18,
+    color: "#004AD9",
   },
 });

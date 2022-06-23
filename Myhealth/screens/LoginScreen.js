@@ -36,10 +36,32 @@ const LoginScreen = () => {
             value={password}
             placeholder='Password'
           />
+          {/* forgot password */}
         </View>
-        <View style={styles.homeTextContainer}>
+        <View style={styles.screenTextContainer}>
           <TouchableOpacity onPress={() => {}}>
             <Text style={styles.pressableText}>Forgot Password?</Text>
+          </TouchableOpacity>
+        </View>
+        {/* login button */}
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity onPress={() => {}} style={styles.button}>
+            <Text style={styles.buttonTexts}>Sign In</Text>
+          </TouchableOpacity>
+        </View>
+        {/* sign up link */}
+        <View style={styles.screenTextContainer}>
+          <Text>
+            Don't have an aacount?
+            <TouchableOpacity onPress={() => {}}>
+              <Text styles={styles.pressableText}> Sign Up</Text>
+            </TouchableOpacity>
+          </Text>
+        </View>
+        {/* Admin link */}
+        <View style={styles.screenTextContainer}>
+          <TouchableOpacity onPress={() => {}}>
+            <Text style={styles.pressableText}>Admin</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -50,63 +72,4 @@ const LoginScreen = () => {
 export default LoginScreen;
 
 //Component Styles
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#FFFFF",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  inputsContainter: {
-    positions: "absolute",
-    width: "90%",
-  },
-  input: {
-    padding: 10,
-    marginTop: 25,
-    top: 369,
-    borderRadius: 10,
-    height: 57,
-    backgroundColor: "rgba(255, 88, 88, 0.15)",
-  },
-  logo: {
-    borderRadius: 20,
-    position: "absolute",
-    width: 131,
-    height: 134,
-    top: 77,
-    justifyContent: "center",
-  },
-  welcomeTextBox: {
-    position: "absolute",
-    width: 208,
-    height: 78,
-    justifyContent: "center",
-    top: 251,
-  },
-  welcomeText: {
-    fontFamily: "normal",
-    fontStyle: "normal",
-    fontSize: 32,
-    fontWeight: "600",
-    lineHeight: 39,
-    textAlign: "center",
-    color: "#000",
-  },
-  homeTextContainer: {
-    position: "absolute",
-    width: 140,
-    height: 18,
-    top: 536,
-    left: 225,
-  },
-  pressableText: {
-    fontFamily: "normal",
-    fontStyle: "normal",
-    fontWeight: "600",
-    fontSize: 15,
-    lineHeight: 18,
-    color: "#004AD9",
-  },
-  //button needs to created as a custom component as it is used one too many times in the app
-});
+const styles = StyleSheet.create({});

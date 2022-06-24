@@ -12,8 +12,8 @@ import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 
 const LoginScreen = () => {
-  const [email, onChangeText] = useState("");
-  const [password, onChangePassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <SafeAreaView>
       <KeyboardAvoidingView>
@@ -27,15 +27,15 @@ const LoginScreen = () => {
           <View style={styles.inputsContainter}>
             <TextInput
               style={styles.input}
-              onChangeText={onChangeText}
               value={email}
+              onChangeText={(text) => setEmail(text)}
               placeholder='Email Address'
             />
             <TextInput
               secureTextEntry //hides the password as it's being entered
               style={styles.input}
-              onChangeText={onChangePassword}
               value={password}
+              onChangeText={(text) => setPassword(text)}
               placeholder='Password'
             />
             {/* forgot password */}

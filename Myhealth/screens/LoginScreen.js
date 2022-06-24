@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#FFFFFF",
   },
   logo: {
     position: "relative",
@@ -89,6 +90,8 @@ const styles = StyleSheet.create({
   },
   welcomeTextBox: {
     position: "relative",
+    justifyContent: "center",
+    alignItems: "center",
     width: 208,
     height: 78,
     marginTop: 20,

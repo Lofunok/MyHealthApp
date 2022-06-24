@@ -3,11 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import UserNavigation from "./routes/UserNavigation";
 
 export default function App() {
-  return (
-    <NavigationContainer>
-      <UserNavigation />
-    </NavigationContainer>
-  );
+  return <UserNavigation />;
 }
 
 /* const styles = StyleSheet.create({

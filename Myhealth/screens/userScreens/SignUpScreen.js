@@ -10,8 +10,10 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
+import { useNavigation } from "@react-navigation/native";
 
 const SignUpScreen = () => {
+  const navigation = useNavigation();
   //States to handle user inputs fro signing in
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
@@ -87,25 +89,36 @@ const SignUpScreen = () => {
             <Text style={styles.regularText}>
               By submtting this form, you are agreeing to our{" "}
             </Text>
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate("https://myhealth.co,terms-of-use")
+              }
+            >
               <Text style={styles.pressabletext}>Terms of Use</Text>
             </TouchableOpacity>
             <Text style={styles.regularText}> and our </Text>
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate("https://myhealth.co,privacy-policy")
+              }
+            >
               <Text style={styles.pressabletext}>Privacy Policy</Text>
             </TouchableOpacity>
             <Text style={styles.regularText}>.</Text>
           </View>
           {/* Create account button */}
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.button} onPress={() => {}}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate("SuccessModal")}
+            >
               <Text style={styles.buttonText}>Create account</Text>
             </TouchableOpacity>
           </View>
           {/* back to sign in link */}
           <View style={styles.screenTextContainer}>
             <Text style={styles.regularText}>Already have an account? </Text>
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity onPress={() => navigation.navigate("Login")}>
               <Text style={styles.pressabletext}>Sign In</Text>
             </TouchableOpacity>
           </View>
@@ -121,6 +134,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
+    height: "100%",
     backgroundColor: "#FFFFFF",
   },
   logo: {

@@ -10,8 +10,10 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
+import { useNavigation } from "@react-navigation/native";
 
 export default function UserLoginScreen() {
+  const navigation = useNavigation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -50,20 +52,23 @@ export default function UserLoginScreen() {
           </View>
           {/* login button */}
           <View style={styles.buttonContainer}>
-            <TouchableOpacity onPress={() => {}} style={styles.button}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Home")}
+              style={styles.button}
+            >
               <Text style={styles.buttonText}>Sign In</Text>
             </TouchableOpacity>
           </View>
           {/* sign up link */}
           <View style={styles.screenTextContainer}>
             <Text style={styles.regularText}>Don't have an acount?</Text>
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
               <Text style={styles.pressableText}> Sign Up</Text>
             </TouchableOpacity>
           </View>
           {/* Admin link */}
           <View style={[styles.screenTextContainer, styles.adminPosition]}>
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity onPress={() => navigation.navigate("AdminLogin")}>
               <Text style={styles.pressableText}>Admin</Text>
             </TouchableOpacity>
           </View>
@@ -79,6 +84,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#FFFFFF",
+    height: "100%",
   },
   logo: {
     position: "relative",

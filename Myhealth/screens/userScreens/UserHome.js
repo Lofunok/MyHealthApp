@@ -10,8 +10,10 @@ import {
 import React, { useState } from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const UserHome = () => {
+  const navigation = useNavigation();
   const [usersName, setUsersName] = useState("User 1");
   return (
     <SafeAreaView>
@@ -32,10 +34,16 @@ const UserHome = () => {
       <View style={styles.contentContainer}>
         {/* selection buttons */}
         <View style={styles.buttonContainer}>
-          <TouchableOpacity onPress={() => {}} style={styles.button}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("BookingDoctorChoice")}
+            style={styles.button}
+          >
             <Text style={styles.buttonText}>Book appointment</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={styles.button}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("UserAppointmentsList")}
+            style={styles.button}
+          >
             <Text style={styles.buttonText}>Manage appointments</Text>
           </TouchableOpacity>
         </View>
@@ -43,12 +51,12 @@ const UserHome = () => {
       {/* footer */}
       <View style={styles.footer}>
         <View style={styles.homeButton}>
-          <TouchableOpacity onPress={() => {}}>
+          <TouchableOpacity onPress={() => navigation.navigate("Home")}>
             <FontAwesome name='home' size={45} color='grey' />
           </TouchableOpacity>
         </View>
         <View style={styles.menuButton}>
-          <TouchableOpacity onPress={() => {}}>
+          <TouchableOpacity onPress={() => navigation.navigate("MenuTab")}>
             <MaterialCommunityIcons name='menu' size={45} color='grey' />
           </TouchableOpacity>
         </View>
@@ -89,7 +97,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   headerText: {
-    fontFamily: "Montserrat",
+    fontFamily: "normal",
     fontStyle: "normal",
     fontWeight: "600",
     fontSize: 26,
@@ -124,7 +132,7 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     flexDirection: "row",
     backgroundColor: "#FFFFFF",
-    height: 43,
+    height: 54,
   },
 
   homeButton: {

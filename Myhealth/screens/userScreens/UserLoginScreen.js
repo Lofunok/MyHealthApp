@@ -11,7 +11,7 @@ import {
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 
-const UserLoginScreen = () => {
+export default function UserLoginScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -71,9 +71,7 @@ const UserLoginScreen = () => {
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
-};
-
-export default UserLoginScreen;
+}
 
 //Component Styles
 const styles = StyleSheet.create({

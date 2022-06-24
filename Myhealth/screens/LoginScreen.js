@@ -48,7 +48,6 @@ const LoginScreen = () => {
           {/* login button */}
           <View style={styles.buttonContainer}>
             <TouchableOpacity onPress={() => {}} style={styles.button}>
-              <View style={styles.buttonTextContainer}></View>
               <Text style={styles.buttonText}>Sign In</Text>
             </TouchableOpacity>
           </View>
@@ -149,11 +148,6 @@ const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 10,
     padding: 15,
-  },
-  buttonTextContainer: {
-    position: "relative",
-    justifyContent: "center",
-    alignItems: "center",
   },
   buttonText: {
     fontFamily: "normal",

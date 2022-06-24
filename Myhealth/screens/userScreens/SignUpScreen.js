@@ -27,7 +27,10 @@ const SignUpScreen = () => {
         <View style={styles.container}>
           <StatusBar style='auto' />
           {/* Logo */}
-          <Image style={styles.logo} source={require("../assets/Logo.jpg")} />
+          <Image
+            style={styles.logo}
+            source={require("../../assets/Logo.jpg")}
+          />
           {/* Headding */}
           <View style={styles.headingContainer}>
             <Text style={styles.heading}>Create new account</Text>
@@ -118,6 +121,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#FFFFFF",
   },
   logo: {
     position: "relative",

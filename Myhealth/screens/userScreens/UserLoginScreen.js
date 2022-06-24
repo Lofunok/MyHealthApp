@@ -11,14 +11,17 @@ import {
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 
-const LoginScreen = () => {
+const UserLoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
     <SafeAreaView>
       <KeyboardAvoidingView>
         <View style={styles.container}>
-          <Image style={styles.logo} source={require("../assets/Logo.jpg")} />
+          <Image
+            style={styles.logo}
+            source={require("../../assets/Logo.jpg")}
+          />
           <StatusBar style='auto' />
           <View style={styles.welcomeTextBox}>
             <Text style={styles.welcomeText}>Welcome To MyHealth.</Text>
@@ -70,7 +73,7 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default UserLoginScreen;
 
 //Component Styles
 const styles = StyleSheet.create({

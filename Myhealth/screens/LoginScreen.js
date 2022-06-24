@@ -54,11 +54,9 @@ const LoginScreen = () => {
           </View>
           {/* sign up link */}
           <View style={styles.screenTextContainer}>
+            <Text style={styles.regularText}>Don't have an acount?</Text>
             <TouchableOpacity onPress={() => {}}>
-              <Text style={styles.regularText}>
-                Don't have an aacount?
-                <Text style={styles.pressableText}> Sign Up</Text>
-              </Text>
+              <Text style={styles.pressableText}> Sign Up</Text>
             </TouchableOpacity>
           </View>
           {/* Admin link */}
@@ -116,6 +114,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   screenTextContainer: {
+    flexWrap: "wrap",
+    flexDirection: "row",
     position: "relative",
     justifyContent: "center",
     alignItems: "center",

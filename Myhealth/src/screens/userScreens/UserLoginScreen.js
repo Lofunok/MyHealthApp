@@ -11,6 +11,8 @@ import {
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
+import firebase from '../config/db';
+
 
 export default class Login extends Component {
   constructor() {

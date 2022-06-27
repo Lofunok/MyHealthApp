@@ -1,3 +1,4 @@
+//config/db.js
 import Firebase from "firebase";
 let config = {
   apiKey: "AIzaSyA060qd9WWud3l2o3EtAPfRX-zEwTYqDaQ",
@@ -10,3 +11,10 @@ let config = {
 };
 let app = Firebase.initializeApp(config);
 export const db = app.database();
+
+return (
+  <View style={styles.container}>
+    <Text style={styles.textStyle}>Hello, {this.state.displayName}</Text>
+    <Button color="#3740FE" title="Logout" onPress={() => this.signOut()} />
+  </View>
+);
